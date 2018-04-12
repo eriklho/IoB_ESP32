@@ -6,10 +6,12 @@ char serverName[] = "api.pushingbox.com";
 boolean lastConnected = false;  
 int status = WL_IDLE_STATUS;     // the Wifi radio's status
 
+
 WiFiClient client;
 
 void setup() {
   Serial.begin(115200);
+  pinMode(ledpin,OUTPUT);
  
   // attempt to connect using WPA2 encryption:
   Serial.println("Attempting to connect to WPA network...");
@@ -27,8 +29,10 @@ void setup() {
 }
  
 void loop() {
-  sendToPushingBox("Let's count stuff!");
+  sendToPushingBox(devid,"Let's count stuff!");
   delay(15000);
+  digitalWrite(ledpin,ledstate);
+  ledstate != ledstate;
 }
 
 //Function for sending the request to PushingBox
