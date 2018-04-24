@@ -21,5 +21,5 @@ enum MPU {
   gyro_z
 };
 
-MPU MPU_value;
+
 #endif
