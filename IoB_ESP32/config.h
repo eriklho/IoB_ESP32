@@ -11,5 +11,15 @@ int ledstate = LOW;
 // Debug mode
 boolean DEBUG = true;
 
+enum MPU {
+  accelerometer_x,
+  accelerometer_y,
+  accelerometer_z,
+  temperature,
+  gyro_x,
+  gyro_y,
+  gyro_z
+};
 
+MPU MPU_value;
 #endif
